@@ -22,25 +22,24 @@
  THE SOFTWARE.
  ****************************************************************************/
 
-#include "HelloWorldScene.h"
-#include <MainMenuScene.h>
+#include "MainMenuScene.h"
 
 USING_NS_CC;
 
-Scene* HelloWorld::createScene()
+Scene* MainMenu::createScene()
 {
-    return HelloWorld::create();
+    return MainMenu::create();
 }
 
 // Print useful error message instead of segfaulting when files are not there.
 static void problemLoading(const char* filename)
 {
     printf("Error while loading: %s\n", filename);
-    printf("Depending on how you compiled you might have to add 'Resources/' in front of filenames in HelloWorldScene.cpp\n");
+    printf("Depending on how you compiled you might have to add 'Resources/' in front of filenames in MainMenuScene.cpp\n");
 }
 
 // on "init" you need to initialize your instance
-bool HelloWorld::init()
+bool MainMenu::init()
 {
     //////////////////////////////
     // 1. super init first
@@ -60,7 +59,7 @@ bool HelloWorld::init()
     auto closeItem = MenuItemImage::create(
                                            "CloseNormal.png",
                                            "CloseSelected.png",
-                                           CC_CALLBACK_1(HelloWorld::menuCloseCallback, this));
+                                           CC_CALLBACK_1(MainMenu::menuCloseCallback, this));
 
     if (closeItem == nullptr ||
         closeItem->getContentSize().width <= 0 ||
@@ -86,7 +85,7 @@ bool HelloWorld::init()
     // add a label shows "Hello World"
     // create and initialize a label
 
-    auto label = Label::createWithTTF("Ximer Game", "fonts/Marker Felt.ttf", 24);
+    auto label = Label::createWithTTF("MAIN MENU SCENE", "fonts/Marker Felt.ttf", 24);
     if (label == nullptr)
     {
         problemLoading("'fonts/Marker Felt.ttf'");
@@ -101,46 +100,26 @@ bool HelloWorld::init()
         this->addChild(label, 1);
     }
 
-    // add "HelloWorld" splash screen"
-    auto sprite = Sprite::create("HelloWorld.png");
+    // add "MainMenu" splash screen"
+    auto sprite = Sprite::create("anime.jpg");
     if (sprite == nullptr)
     {
-        problemLoading("'HelloWorld.png'");
+        problemLoading("'anime.jpg'");
     }
     else
     {
         // position the sprite on the center of the screen
         sprite->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
+        sprite->setScale(0.5f);
 
         // add the sprite as a child to this layer
         this->addChild(sprite, 0);
     }
-
-    auto ChangeScene = EventListenerKeyboard::create();
-
-    ChangeScene->onKeyPressed = [](EventKeyboard::KeyCode keyCode, Event* event){
-
-        if (keyCode == EventKeyboard::KeyCode::KEY_ENTER)
-        {
-            // get the director and then use it
-            auto director = cocos2d::Director::getInstance();
-
-            // get the director for each operation (not recommended for repeated requests)
-            auto s = cocos2d::Director::getInstance()->getWinSize();
-
-            auto MainMenuScene = MainMenu::createScene();
-            director->replaceScene(MainMenuScene);
-        }
-    };
-
-    this->_eventDispatcher->addEventListenerWithFixedPriority(ChangeScene, 1);
-
-
     return true;
 }
 
 
-void HelloWorld::menuCloseCallback(Ref* pSender)
+void MainMenu::menuCloseCallback(Ref* pSender)
 {
     //Close the cocos2d-x game scene and quit the application
     Director::getInstance()->end();

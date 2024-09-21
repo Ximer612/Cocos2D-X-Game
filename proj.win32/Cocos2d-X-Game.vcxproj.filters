@@ -13,6 +13,9 @@
     <ClCompile Include="E:\Documenti\GitHub\Cocos2d-X-Game\cocos2d\cocos\precheader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\MainMenuScene.cpp">
+      <Filter>Source Files\Classes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="E:\Documenti\GitHub\Cocos2d-X-Game\Classes\AppDelegate.h">
@@ -45,6 +48,9 @@
     <ClInclude Include="E:\Documenti\GitHub\Cocos2d-X-Game\Resources\res\.gitkeep">
       <Filter>Resources\res</Filter>
     </ClInclude>
+    <ClInclude Include="..\Classes\MainMenuScene.h">
+      <Filter>Source Files\Classes</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="E:\Documenti\GitHub\Cocos2d-X-Game\CMakeLists.txt" />
@@ -73,5 +79,10 @@
     <Filter Include="Source Files\proj.win32">
       <UniqueIdentifier>{B78E0908-C153-3F11-823F-FA49EFCC9A1D}</UniqueIdentifier>
     </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\Resources\anime.jpg">
+      <Filter>Resources</Filter>
+    </Image>
   </ItemGroup>
 </Project>
