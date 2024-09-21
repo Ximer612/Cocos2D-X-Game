@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="E:\Documenti\GitHub\Cocos2d-X-Game\proj.win32\CMakeFiles\d03ba0561aeb2ce1957c289c7f440fa2\SYNC_RESOURCE-Cocos2d-X-Game.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\Documenti\GitHub\Cocos2d-X-Game\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="E:\Documenti\GitHub\Cocos2d-X-Game\proj.win32\CMakeFiles\SYNC_RESOURCE-Cocos2d-X-Game" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{B1EAD5CB-4330-3A33-B352-1F14238FF54C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
